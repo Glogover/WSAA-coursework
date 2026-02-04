@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Przykład HTML + JavaScript</title>
+</head>
+<body>
+
+  <h1>Witaj 👋</h1>
+  <p id="tekst">Kliknij przycisk, aby zmienić ten tekst.</p>
+
+  <button onclick="zmienTekst()">Kliknij mnie</button>
+
+  <script>
+    function zmienTekst() {
+      document.getElementById("tekst").textContent =
+        "Tekst został zmieniony przez JavaScript 🚀";
+    }
+  </script>
+
+</body>
+</html>
