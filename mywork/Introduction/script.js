@@ -10,7 +10,7 @@ function updateDateTime() {
   });
 
   document.getElementById("datetime").textContent =
-    "Current data and time in Poland: " + now;
+    "Current date and time in Poland: " + now;
 }
 
 // pierwsze uruchomienie
