@@ -1,3 +1,5 @@
+# Modified program to deal with the header line separately
+
 import csv
 FILENAME= "data.csv"
 #DATADIR = “where did you put it”
