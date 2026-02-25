@@ -1,7 +1,13 @@
-R
-R	53.6794
-R	53.6794	-6.24253
-R	53.6794	-6.24253	D841
-R	53.6794	-6.24253	D841	24 Feb 2026
-R	53.6794	-6.24253	D841	24 Feb 2026	D841\n23:40 - Grand Canal Dock to Dundalk (0 mins late)\nDeparted Laytown next stop Drogheda
-R	53.6794	-6.24253	D841	24 Feb 2026	D841\n23:40 - Grand Canal Dock to Dundalk (0 mins late)\nDeparted Laytown next stop Drogheda	To Dundalk
+N	51.9018	-8.4582	D571	25 Feb 2026	D571\nCork to Midleton\nExpected Departure 16:15	To Midleton
+N	53.3397	-6.23773	D823	25 Feb 2026	D823\nGrand Canal Dock to Drogheda\nExpected Departure 16:19	To Drogheda
+N	53.3464	-6.29461	D217	25 Feb 2026	D217\nDublin Heuston to Portlaoise\nExpected Departure 16:20	To Portlaoise
+N	53.3531	-6.24591	D413	25 Feb 2026	D413\nDublin Connolly to Hazelhatch\nExpected Departure 16:17	To Hazelhatch
+R	0	0	D922	25 Feb 2026	D922\n16:00 - Dublin Pearse to Maynooth (2 mins late)\nDeparted North Strand Junction next stop Drumcondra	Northbound
+R	53.2469	-6.66386	D216	25 Feb 2026	D216\n15:25 - Dublin Heuston to Portlaoise (12 mins late)\nDeparted Sallins next stop Newbridge	To Portlaoise
+R	53.3353	-6.45233	D412	25 Feb 2026	D412\n15:30 - Grand Canal Dock to Hazelhatch (0 mins late)\nArrived Adamstown next stop Hazelhatch	Southbound
+R	53.3433	-6.24829	D923	25 Feb 2026	D923\n16:12 - Dublin Pearse to Maynooth (0 mins late)\nDeparted Dublin Pearse next stop Tara Street	Northbound
+R	53.3755	-6.33135	D318	25 Feb 2026	D318\n15:55 - Docklands to M3 Parkway (5 mins late)\nArrived Ashtown next stop Navan Road Parkway	Northbound
+R	53.3816	-6.37149	D921	25 Feb 2026	D921\n15:39 - Grand Canal Dock to Maynooth (5 mins late)\nArrived Castleknock next stop Coolmine	To Maynooth
+R	53.638	-6.21705	D821	25 Feb 2026	D821\n15:19 - Grand Canal Dock to Drogheda (1 mins late)\nArrived Gormanston next stop Laytown	To Drogheda
+T	53.378	-6.58993	D920	25 Feb 2026	D920\n15:09 - Grand Canal Dock to Maynooth(-6 mins late)\nTERMINATED Maynooth at 16:10	To Maynooth
+T	53.712	-6.33538	D820	25 Feb 2026	D820\n15:07 - Dublin Connolly to Drogheda(2 mins late)\nTERMINATED Drogheda at 16:10	Northbound

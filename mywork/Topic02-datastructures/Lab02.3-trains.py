@@ -52,8 +52,8 @@ with  open('week03_train.csv', mode='w', newline='') as train_file:
         # instead of printing this you could output to another format
         #print (dataList)
         # for example a CSV file 
-    #train_code = dataList[3] 
-    #if train_code.startswith("D"): # only write out DART trains
+            #train_code = dataList[3] 
+            #if train_code.startswith("D"): # only write out DART trains
             train_writer.writerow(dataList)
 
 
