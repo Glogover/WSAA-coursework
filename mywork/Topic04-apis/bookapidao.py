@@ -29,7 +29,6 @@ def updateBook(id, bookdiff):
     updateurl = url + "/" + str(id)
     response = requests.put(updateurl, json=bookdiff)
     return response.json()
-    pass
 
 def deleteBook(id):
     deleteurl = url + "/" + str(id)
