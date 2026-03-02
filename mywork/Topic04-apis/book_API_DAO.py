@@ -45,13 +45,12 @@ if __name__ == "__main__":
     "price":1000000
     }
 
-
    #print(getAllBooks())
    #print(getBookById(1560))
    #print(deleteBook(77))
    #print(createBook({}))
    print(updateBook(1560, bookdiff))
-   
+
 
 
           
