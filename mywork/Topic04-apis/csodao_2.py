@@ -23,10 +23,28 @@ def getFormatted(dataset):
     values = data["value"]
     dimensions = data["dimension"]
     sizes = data["size"]
-    
-    
-    for id in ids:
-        print(id)
+
+    for dim0 in range(0, sizes[0]): # loop through the first dimension
+        currentId = ids[0]
+        index = dimensions[currentId]["category"]["index"][dim0]
+        label = dimensions[currentId]["category"]["label"][index]
+        print(label)
+        for dim1 in range(0, sizes[1]): # loop through the second dimension
+            currentId = ids[1]
+            index = dimensions[currentId]["category"]["index"][dim1]
+            label = dimensions[currentId]["category"]["label"][index]
+            print("\t",label)
+            for dim2 in range(0, sizes[2]): # loop through the third dimension
+                currentId = ids[2]
+                index = dimensions[currentId]["category"]["index"][dim2]
+                label = dimensions[currentId]["category"]["label"][index]
+                print("\t\t",label)
+                for dim3 in range(0, sizes[3]): # loop through the fourth dimension
+                    currentId = ids[3]
+                    index = dimensions[currentId]["category"]["index"][dim3]
+                    label = dimensions[currentId]["category"]["label"][index]
+                    print("\t\t\t",label)
+        
 
 if __name__ == "__main__":
     #getAllasFile("FP001")
