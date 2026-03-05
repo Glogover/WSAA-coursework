@@ -23,6 +23,8 @@ def getFormatted(dataset):
     values = data["value"]
     dimensions = data["dimension"]
     sizes = data["size"]
+    valuecount = 0
+    result = 0
 
     for dim0 in range(0, sizes[0]): # loop through the first dimension
         currentId = ids[0]
@@ -43,7 +45,9 @@ def getFormatted(dataset):
                     currentId = ids[3]
                     index = dimensions[currentId]["category"]["index"][dim3]
                     label = dimensions[currentId]["category"]["label"][index]
-                    print("\t\t\t",label)
+                    print("\t\t\t",label, " ", values[valuecount])
+                    valuecount+=1
+
         
 
 if __name__ == "__main__":
