@@ -14,11 +14,25 @@ def getAll(dataset):
     response = requests.get(url)
     return response.json()
 
+def getFormattedAsFile(dataset):
+    pass
+
+def getFormatted(dataset):
+    data = getAll(dataset)
+    ids = data["id"]
+    values = data["value"]
+    dimensions = data["dimension"]
+    sizes = data["size"]
+    
+    
+    for id in ids:
+        print(id)
 
 if __name__ == "__main__":
-    getAllasFile("FP001")
+    #getAllasFile("FP001")
+    getFormatted("FP001")
 
-    
+
 
 
 
