@@ -66,5 +66,5 @@ def getFormatted(dataset):
 
 
 if __name__ == "__main__":
-    #getAllAsFile("FP001")
-    getFormattedAsFile("FP001")
+    getAllAsFile("FP001")
+    #getFormattedAsFile("FP001")
