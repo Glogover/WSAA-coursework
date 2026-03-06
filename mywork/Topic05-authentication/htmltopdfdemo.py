@@ -9,8 +9,7 @@ from config import apikeys as cfg # we import the API keys from a separate confi
 #targetUrl = "https://en.wikipedia.org" # this is the web page we want to convert to PDF
 targetUrl = "https://example.com/" # you can change this to any web page you want, but make sure it is a valid URL and that the API can access it (some websites may block requests from certain sources)
 
-apikey = cfg["htmltopdfkey"] # we get the API key from the config file
-# you can get a free API key from https://html2pdf.app/ (limited to 100 conversions per month and 1 MB file size, but you can upgrade to a paid plan for more conversions and larger file sizes)
+apikey = cfg["htmltopdfkey"] # we get the API key from the config file; you can get a free API key from https://html2pdf.app/ (limited to 100 conversions per month and 1 MB file size, but you can upgrade to a paid plan for more conversions and larger file sizes)
 
 apiurl = "https://api.html2pdf.app/v1/generate"  # this is the API endpoint for generating PDF files from web pages
 
