@@ -25,7 +25,7 @@ encoded = base64.b64encode(content.encode()).decode() # encode the content to ba
 
 data = {
     "message": "Add hello.txt using API",
-    "content": encoded 
+    "content": encoded
 }
 
 response = requests.put(url, headers=headers, json=data) # make a PUT request to the GitHub API to create or update the file at the specified path in the repository. The request includes the URL, headers for authentication, and a JSON payload containing the commit message and the base64-encoded content of the file.
