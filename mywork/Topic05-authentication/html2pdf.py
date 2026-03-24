@@ -1,6 +1,6 @@
 import requests
 import urllib.parse
-from config import config as cfg
+from config import apikeys as cfg
 
 targetURl = "https://andrewbeatty1.pythonanywhere.com/bookviewer.html"
 
@@ -17,6 +17,6 @@ print(response.status_code)
 
 result = response.content
 
-with open ("document.pdf", "wb") as handler:
+with open ("document2.pdf", "wb") as handler:
     handler.write(result)
 
