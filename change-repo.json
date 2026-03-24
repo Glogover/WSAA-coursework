@@ -1,0 +1,53 @@
+{
+    "content": {
+        "name": "hello.txt",
+        "path": "hello.txt",
+        "sha": "d2f7535f36046cb6fda3cc09d41629f45bddc04a",
+        "size": 64,
+        "url": "https://api.github.com/repos/Glogover/aprivateone/contents/hello.txt?ref=main",
+        "html_url": "https://github.com/Glogover/aprivateone/blob/main/hello.txt",
+        "git_url": "https://api.github.com/repos/Glogover/aprivateone/git/blobs/d2f7535f36046cb6fda3cc09d41629f45bddc04a",
+        "download_url": "https://raw.githubusercontent.com/Glogover/aprivateone/main/hello.txt?token=BOVACCYT7RINT2UN5TQSCMDJYMPRQ",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Glogover/aprivateone/contents/hello.txt?ref=main",
+            "git": "https://api.github.com/repos/Glogover/aprivateone/git/blobs/d2f7535f36046cb6fda3cc09d41629f45bddc04a",
+            "html": "https://github.com/Glogover/aprivateone/blob/main/hello.txt"
+        }
+    },
+    "commit": {
+        "sha": "06890dd6abc23e106994a0b29448900b74a5311e",
+        "node_id": "C_kwDORv5JH9oAKDA2ODkwZGQ2YWJjMjNlMTA2OTk0YTBiMjk0NDg5MDBiNzRhNTMxMWU",
+        "url": "https://api.github.com/repos/Glogover/aprivateone/git/commits/06890dd6abc23e106994a0b29448900b74a5311e",
+        "html_url": "https://github.com/Glogover/aprivateone/commit/06890dd6abc23e106994a0b29448900b74a5311e",
+        "author": {
+            "name": "Marcin Kaminski",
+            "email": "marcin442228@gmail.com",
+            "date": "2026-03-24T23:31:40Z"
+        },
+        "committer": {
+            "name": "Marcin Kaminski",
+            "email": "marcin442228@gmail.com",
+            "date": "2026-03-24T23:31:40Z"
+        },
+        "tree": {
+            "sha": "a557f37ad469150bb625d87f4f434407e6e41adb",
+            "url": "https://api.github.com/repos/Glogover/aprivateone/git/trees/a557f37ad469150bb625d87f4f434407e6e41adb"
+        },
+        "message": "Add hello.txt using API",
+        "parents": [
+            {
+                "sha": "0ddcef544d3b1511742b320e92d2089a989abfc5",
+                "url": "https://api.github.com/repos/Glogover/aprivateone/git/commits/0ddcef544d3b1511742b320e92d2089a989abfc5",
+                "html_url": "https://github.com/Glogover/aprivateone/commit/0ddcef544d3b1511742b320e92d2089a989abfc5"
+            }
+        ],
+        "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+        }
+    }
+}
