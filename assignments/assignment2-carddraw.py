@@ -30,6 +30,10 @@ print("\nChecking your hand...\n") # Print a message indicating that the program
 value_count = Counter(values) # Count the occurrences of each card value to check for pairs and triples
 suit_count = Counter(suits) # Count the occurrences of each card suit to check for flushes
 
+# No luck
+if 1 in value_count.values() and len(suit_count) > 1: # Check if all card values are unique (no pairs or triples) and there are multiple suits (no flush)
+    print("Sorry, no pairs, triples, flushes or straights. Better luck next time!")
+
 # Pair
 if 2 in value_count.values(): # Check if any card value appears exactly twice, indicating a pair
     print("Congratulations! You got a Pair!")
