@@ -9,10 +9,10 @@ app = Flask(__name__)
 def index():
     return "Hello Mamm\zdf\sdfy"
 
-@app.route("/blah")
+@app.route("/blah2")
 
 def blah():
-    return "this is blah"
+    return "this is blah2"
 
 if __name__ == "__main__":
     app.run(debug=True)
