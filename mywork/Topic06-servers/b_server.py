@@ -21,7 +21,7 @@ def update_user():
 
 @app.route('/invalid', methods=['GET'])
 def testingredirect():
-    return redirect(url_for(index)) # this will redirect to the index page
+    return redirect(url_for('index')) # this will redirect to the index page
 
 @app.route('/users/<username>', methods=['GET'])
 def get_user_byname(username):
@@ -30,6 +30,11 @@ def get_user_byname(username):
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user_byid(id):
     return f"your id is {id}"
+
+@app.route('/square/<int:id>', methods=['GET'])
+def square(id):
+    return f"the square of {id} is {id**2}"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
