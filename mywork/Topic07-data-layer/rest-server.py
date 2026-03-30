@@ -15,15 +15,15 @@ def index():
 # curl http://127.0.0.1:5000/books
 
 @app.route('/books', methods=['GET'])
-def getall():
-        return jsonify(bookDAO.getAll())
+def get_all():
+        return jsonify(bookDAO.get_all())
 
 # find by id
 # curl http://127.0.0.1:5000/books/1
 
 @app.route('/books/<int:id>', methods=['GET'])
-def findbyid(id):
-        return jsonify(bookDAO.findByID(id))
+def find_by_id(id):
+        return jsonify(bookDAO.find_by_id(id))
 
 #create
 #curl -X POST -d "{\"title\":\"test\", \"author\":\"some guy\", \"price\":123}" http://127.0.0.1:5000/books
