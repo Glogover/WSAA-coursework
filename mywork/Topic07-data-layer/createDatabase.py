@@ -1,4 +1,4 @@
-import mysql.connector
+import mysql.connector # This module allows us to connect to a MySQL database and execute SQL commands from Python.
 
 db = mysql.connector.connect(
     host="localhost",
