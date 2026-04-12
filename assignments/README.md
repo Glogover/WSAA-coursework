@@ -78,7 +78,7 @@ The program uses the `collections.Counter` class to analyse card values and suit
 File: `assignment03-cso.ipynb`  
 Dataset: `cso.json`
 
-This program retrieves the dataset for the "exchequer account (historical series)" from the CSO, and stores it into a file called "cso.json".
+This program retrieves the dataset for the "exchequer account (historical series)" from the **Central Statistics Office** (CSO), and stores it into a file called "cso.json".
 
 ---
 
