@@ -26,6 +26,8 @@ response = requests.get(url, headers=headers, params={"ref": branch}) # API call
 response.raise_for_status() # check if the API call was successful, if not it will raise an HTTP error with the status code and error message
 data = response.json() # parse the JSON response from the GitHub API to get the file content and metadata, such as the SHA hash needed for updating the file later
 
+# For additional information on the Secure Hash Algorithm (SHA), see: https://en.wikipedia.org/wiki/Secure_Hash_Algorithms
+
 # decode content
 content = base64.b64decode(data["content"]).decode("utf-8") # GitHub API returns file content in base64 encoding, so we need to decode it to get the original text content of the file
 
