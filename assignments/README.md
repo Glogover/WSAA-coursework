@@ -89,7 +89,7 @@ Files:
 - `assignment04-github.py`
 - `assignment04-github.txt`
 
-This program demonstrates how to interact with the **GitHub REST API** using Python.
+This program demonstrates how to interact with the **GitHub REST API** using Python by replacing "Andrew" with "Marcin" in assignment04-github.txt.
 
 The script:
 
@@ -105,11 +105,11 @@ The script authenticates using a GitHub API token stored in a configuration file
 Example text file used by the script:
 
 ```
-Marcin found a strange key in the park one afternoon.
+Andrew found a strange key in the park one afternoon.
 He wondered what door it might open.
 After walking for a while, he noticed a tiny old box under a tree.
 The key fit perfectly and the box slowly opened.
-Inside was a note that said: “Congratulations, Marcin — you found the adventure.”
+Inside was a note that said: “Congratulations, Andrew — you found the adventure.”
 ```
 
 ---
