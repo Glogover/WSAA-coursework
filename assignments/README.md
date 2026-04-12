@@ -78,16 +78,7 @@ The program uses the `collections.Counter` class to analyse card values and suit
 File: `assignment03-cso.ipynb`  
 Dataset: `cso.json`
 
-This assignment works with a dataset from the **Central Statistics Office (CSO) Ireland**.
-
-The dataset contains historical financial data from the **Exchequer Account (Historical Series)**.
-
-Tasks in this assignment include:
-
-- Accessing public datasets via API
-- Parsing JSON data
-- Extracting and analysing financial statistics
-- Working with time series data
+This program retrieves the dataset for the "exchequer account (historical series)" from the CSO, and stores it into a file called "cso.json".
 
 ---
 
