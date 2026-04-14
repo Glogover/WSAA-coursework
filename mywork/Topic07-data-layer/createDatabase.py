@@ -7,7 +7,7 @@ db = mysql.connector.connect(
 )
 
 cursor = db.cursor()
-cursor.execute("create database wsaa")
+cursor.execute("create database wsaa2")
 
 db.close()
 cursor.close()
