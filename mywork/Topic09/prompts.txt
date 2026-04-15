@@ -1,0 +1,8 @@
+
+Please create for me a client-side application that will interact 
+with an API that performs CRUD operations on books. Use JQuery 
+AJAX for the API calls. Put the HML, CSS and JavaScript in separate 
+files.
+
+---
+
