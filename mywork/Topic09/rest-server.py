@@ -53,7 +53,10 @@ def update(id):
         book["price"] = jsonstring["price"]
 
     bookDAO.update(id, book)
+
+    # FIX: return something so Flask can jsonify it
     return jsonify({"status": "updated"}), 200
+
 
 
 # delete

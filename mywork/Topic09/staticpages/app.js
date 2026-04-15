@@ -32,6 +32,10 @@ function loadBooks() {
         url: API_URL,
         method: "GET",
         success: function (books) {
+
+            // ✔ FIX: usuń null-e zanim zaczniesz renderować
+            books = books.filter(b => b !== null);
+
             const tbody = $("#booksTable tbody");
             tbody.empty();
 
@@ -67,10 +71,11 @@ function updateBook(id) {
         contentType: "application/json",
         data: JSON.stringify(updatedBook),
 
-        // ✔ FIX: treat 200 and 204 as success
         success: function () {
             loadBooks();
         },
+
+        // ✔ FIX: jeśli renderBooks() rzuci wyjątek, jQuery myśli że update się nie udał
         error: function (xhr) {
             if (xhr.status === 200 || xhr.status === 204) {
                 loadBooks();

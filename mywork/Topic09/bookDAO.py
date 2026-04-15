@@ -1,29 +1,26 @@
-# boook dao 
-# this is a demonstration a data layer that connects to a datbase
-
 import mysql.connector
 import dbconfig as cfg
 
 class BookDAO:
-    connection=""
-    cursor =''
-    host=       ''
-    user=       ''
-    password=   ''
-    database=   ''
+    connection = ""
+    cursor = ""
+    host = ""
+    user = ""
+    password = ""
+    database = ""
     
     def __init__(self):
-        self.host=       cfg.mysql['host']
-        self.user=       cfg.mysql['user']
-        self.password=   cfg.mysql['password']
-        self.database=   cfg.mysql['database']
+        self.host = cfg.mysql['host']
+        self.user = cfg.mysql['user']
+        self.password = cfg.mysql['password']
+        self.database = cfg.mysql['database']
 
     def getcursor(self): 
         self.connection = mysql.connector.connect(
-            host=       self.host,
-            user=       self.user,
-            password=   self.password,
-            database=   self.database,
+            host=self.host,
+            user=self.user,
+            password=self.password,
+            database=self.database,
         )
         self.cursor = self.connection.cursor()
         return self.cursor
@@ -34,30 +31,28 @@ class BookDAO:
          
     def getAll(self):
         cursor = self.getcursor()
-        sql="select * from book"
+        sql = "select * from book"
         cursor.execute(sql)
         results = cursor.fetchall()
         returnArray = []
 
         for result in results:
-           book = self.convertToDictionary(result)
-           if book is not None:      # ← FIX
-              returnArray.append(book)
-
+            book = self.convertToDictionary(result)
+            if book is not None:          # ← FIX 1
+                returnArray.append(book)
+        
         self.closeAll()
         return returnArray
 
-
     def findByID(self, id):
         cursor = self.getcursor()
-        sql="select * from book where id = %s"
+        sql = "select * from book where id = %s"
         values = (id,)
 
         cursor.execute(sql, values)
         result = cursor.fetchone()
 
-        # FIX: handle None safely
-        if result is None:
+        if result is None:               # ← FIX 2
             self.closeAll()
             return None
 
@@ -67,7 +62,7 @@ class BookDAO:
 
     def create(self, book):
         cursor = self.getcursor()
-        sql="insert into book (title,author, price) values (%s,%s,%s)"
+        sql = "insert into book (title,author, price) values (%s,%s,%s)"
         values = (book.get("title"), book.get("author"), book.get("price"))
         cursor.execute(sql, values)
 
@@ -79,32 +74,29 @@ class BookDAO:
 
     def update(self, id, book):
         cursor = self.getcursor()
-        sql="update book set title=%s, author=%s, price=%s where id=%s"
+        sql = "update book set title=%s, author=%s, price=%s where id=%s"
         values = (book.get("title"), book.get("author"), book.get("price"), id)
+
         cursor.execute(sql, values)
         self.connection.commit()
         self.closeAll()
-        return True
-
+        return True                      # ← FIX 3
 
     def delete(self, id):
         cursor = self.getcursor()
-        sql="delete from book where id = %s"
+        sql = "delete from book where id = %s"
         values = (id,)
 
         cursor.execute(sql, values)
         self.connection.commit()
         self.closeAll()
-
-        # FIX: return something so Flask can jsonify it
-        return True
+        return True                      # ← FIX 4
 
     def convertToDictionary(self, resultLine):
-        # FIX: handle None safely
-        if resultLine is None:
+        if resultLine is None:           # ← FIX 5 (najważniejszy!)
             return None
 
-        attkeys=['id','title','author','price']
+        attkeys = ['id', 'title', 'author', 'price']
         book = {}
         currentkey = 0
         for attrib in resultLine:
