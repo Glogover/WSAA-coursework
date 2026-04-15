@@ -40,10 +40,13 @@ class BookDAO:
         returnArray = []
 
         for result in results:
-            returnArray.append(self.convertToDictionary(result))
-        
+           book = self.convertToDictionary(result)
+           if book is not None:      # ← FIX
+              returnArray.append(book)
+
         self.closeAll()
         return returnArray
+
 
     def findByID(self, id):
         cursor = self.getcursor()
