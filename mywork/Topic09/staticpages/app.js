@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/books"; // Adjust if needed
+const API_URL = "http://localhost:5000/books";
 
 $(document).ready(function () {
     loadBooks();
@@ -66,8 +66,18 @@ function updateBook(id) {
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(updatedBook),
+
+        // ✔ FIX: treat 200 and 204 as success
         success: function () {
             loadBooks();
+        },
+        error: function (xhr) {
+            if (xhr.status === 200 || xhr.status === 204) {
+                loadBooks();
+            } else {
+                alert("failed to update the book");
+                console.log("Update error:", xhr.status, xhr.responseText);
+            }
         }
     });
 }
@@ -79,6 +89,14 @@ function deleteBook(id) {
         method: "DELETE",
         success: function () {
             loadBooks();
+        },
+        error: function (xhr) {
+            if (xhr.status === 200 || xhr.status === 204) {
+                loadBooks();
+            } else {
+                alert("failed to delete the book");
+                console.log("Delete error:", xhr.status, xhr.responseText);
+            }
         }
     });
 }
