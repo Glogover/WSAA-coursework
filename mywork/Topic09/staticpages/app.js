@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/books"; // Change to your API endpoint
+const API_URL = "http://localhost:5000/api/books"; // Adjust if needed
 
 $(document).ready(function () {
     loadBooks();
@@ -7,7 +7,8 @@ $(document).ready(function () {
     $("#createBook").click(function () {
         const book = {
             title: $("#title").val(),
-            author: $("#author").val()
+            author: $("#author").val(),
+            price: parseInt($("#price").val())
         };
 
         $.ajax({
@@ -18,6 +19,7 @@ $(document).ready(function () {
             success: function () {
                 $("#title").val("");
                 $("#author").val("");
+                $("#price").val("");
                 loadBooks();
             }
         });
@@ -39,6 +41,7 @@ function loadBooks() {
                         <td>${book.id}</td>
                         <td><input type="text" value="${book.title}" id="title-${book.id}"></td>
                         <td><input type="text" value="${book.author}" id="author-${book.id}"></td>
+                        <td><input type="number" value="${book.price}" id="price-${book.id}"></td>
                         <td>
                             <button onclick="updateBook(${book.id})">Update</button>
                             <button onclick="deleteBook(${book.id})">Delete</button>
@@ -54,7 +57,8 @@ function loadBooks() {
 function updateBook(id) {
     const updatedBook = {
         title: $(`#title-${id}`).val(),
-        author: $(`#author-${id}`).val()
+        author: $(`#author-${id}`).val(),
+        price: parseInt($(`#price-${id}`).val())
     };
 
     $.ajax({

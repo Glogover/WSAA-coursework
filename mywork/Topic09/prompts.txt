@@ -6,3 +6,6 @@ files.
 
 ---
 
+You did not include the JavaScript file in the html. Can you please fix this and give me
+the three files again?
+

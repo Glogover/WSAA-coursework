@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Books CRUD App</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript -->
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -15,6 +21,7 @@
         <h2>Add New Book</h2>
         <input type="text" id="title" placeholder="Title">
         <input type="text" id="author" placeholder="Author">
+        <input type="number" id="price" placeholder="Price">
         <button id="createBook">Create Book</button>
     </section>
 
@@ -26,6 +33,7 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Author</th>
+                    <th>Price</th>
                     <th>Actions</th>
                 </tr>
             </thead>
