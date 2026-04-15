@@ -42,18 +42,19 @@ def create():
 # update
 @app.route('/books/<int:id>', methods=['PUT'])
 def update(id):
-        jsonstring = request.json
-        book = {}
+    jsonstring = request.json
+    book = {}
 
-        if "title" in jsonstring:
-                book["title"] = jsonstring["title"]
-        if "author" in jsonstring:
-                book["author"] = jsonstring["author"]
-        if "price" in jsonstring:
-                book["price"] = jsonstring["price"]
-        
-        bookDAO.update(id, book)
-        return jsonify({"status": "updated"}), 200   # ← FIX
+    if "title" in jsonstring:
+        book["title"] = jsonstring["title"]
+    if "author" in jsonstring:
+        book["author"] = jsonstring["author"]
+    if "price" in jsonstring:
+        book["price"] = jsonstring["price"]
+
+    bookDAO.update(id, book)
+    return jsonify({"status": "updated"}), 200
+
 
 # delete
 @app.route('/books/<int:id>', methods=['DELETE'])

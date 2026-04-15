@@ -78,13 +78,11 @@ class BookDAO:
         cursor = self.getcursor()
         sql="update book set title=%s, author=%s, price=%s where id=%s"
         values = (book.get("title"), book.get("author"), book.get("price"), id)
-
         cursor.execute(sql, values)
         self.connection.commit()
         self.closeAll()
-
-        # FIX: return something so Flask can jsonify it
         return True
+
 
     def delete(self, id):
         cursor = self.getcursor()
